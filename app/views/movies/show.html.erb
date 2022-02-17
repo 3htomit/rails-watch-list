@@ -1,0 +1,11 @@
+<%= link_to "Back to movies", movies_path %>
+<hr>
+<div class="d-flex">
+  <img src= <%= @movie['poster_url'] %> alt= "Poster of <%= @movie['title'] %>">
+  <div class="movie-info">
+    <h2> <%= @movie['title'] %> </h2>
+    <br>
+    <p><strong>Overview:</strong></p>
+    <p> <%= @movie['overview'] %> </p>
+  </div>
+</div>

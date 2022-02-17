@@ -1,0 +1,17 @@
+<hr>
+
+<div class="d-flex align-items-center">
+  <h2 class="flex-grow-1"> All your lists </h2>
+  <%= link_to "➕", new_list_path %>
+</div>
+
+<br>
+
+<% @lists.each do |list| %>
+  <ul class="list-group d-flex">
+    <li class="list-group-item"> <%= link_to list['name'], list_path(list['id']) %> </li>
+    <%= link_to "❌", list_path(list),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </ul>
+<% end %>

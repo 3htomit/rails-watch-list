@@ -1,0 +1,13 @@
+<hr>
+<h2> Top 5 movies </h2>
+<br>
+<ul class="list-group">
+  <% @movies.first(5).each do |movie| %>
+    <li class="list-group-item d-flex align-items-center">
+      <img src=<%= movie['poster_url'] %> alt="Poster of <%= movie['title'] %>" class="mx-4">
+      <div class="flex-grow-1">
+        <%= link_to movie['title'], movie_path(movie['id']) %> ( <%= movie['rating'] %> )
+      </div>
+    </li>
+  <% end %>
+</ul>
