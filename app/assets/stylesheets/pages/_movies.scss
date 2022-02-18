@@ -1,9 +1,15 @@
 img {
   height: 300px;
+
   margin-right: 50px;
 }
 
 .card {
+  border-radius: 0.5rem;
+  img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 15rem;
+  }
   a {
     color: darkslategray;
     &:hove {

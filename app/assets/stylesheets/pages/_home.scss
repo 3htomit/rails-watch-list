@@ -6,8 +6,10 @@
   height: 30vh;
   h1 {
     a {
+      font-family: 'Montserrat', sans-serif;
+      text-shadow: 2px 2px 2px gray;
       font-size: 70px;
-      font-weight: bold;
+      font-weight: 900;
       text-decoration: none;
       color: white;
       &:hover {
