@@ -13,66 +13,18 @@
 # Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
 # OTHER MOVIES:
-require "json"
-require "open-uri"
+# require "json"
+# require "open-uri"
 
-response = URI.open("https://api.themoviedb.org/3/movie/top_rated?api_key=3dff1bf01bd3289c680fa6ff783ae088&language=en-US&page=2").read
-repos = JSON.parse(response)
-repos["results"].each do |repo|
-  if repo["original_language"] == "en" || repo["original_language"] == "fr"
-    Movie.create(
-      title: repo['original_title'],
-      overview: repo['overview'],
-      poster_url: "https://www.themoviedb.org/t/p/w1280#{repo['poster_path']}",
-      rating: repo['vote_average']
-    )
-  end
-end
-# OTHER MOVIES:
-require "json"
-require "open-uri"
-
-response = URI.open("https://api.themoviedb.org/3/movie/top_rated?api_key=3dff1bf01bd3289c680fa6ff783ae088&language=en-US&page=3").read
-repos = JSON.parse(response)
-repos["results"].each do |repo|
-  if repo["original_language"] == "en" || repo["original_language"] == "fr"
-    Movie.create(
-      title: repo['original_title'],
-      overview: repo['overview'],
-      poster_url: "https://www.themoviedb.org/t/p/w1280#{repo['poster_path']}",
-      rating: repo['vote_average']
-    )
-  end
-end
-# OTHER MOVIES:
-require "json"
-require "open-uri"
-
-response = URI.open("https://api.themoviedb.org/3/movie/top_rated?api_key=3dff1bf01bd3289c680fa6ff783ae088&language=en-US&page=4").read
-repos = JSON.parse(response)
-repos["results"].each do |repo|
-  if repo["original_language"] == "en" || repo["original_language"] == "fr"
-    Movie.create(
-      title: repo['original_title'],
-      overview: repo['overview'],
-      poster_url: "https://www.themoviedb.org/t/p/w1280#{repo['poster_path']}",
-      rating: repo['vote_average']
-    )
-  end
-end
-# OTHER MOVIES:
-require "json"
-require "open-uri"
-
-response = URI.open("https://api.themoviedb.org/3/movie/top_rated?api_key=3dff1bf01bd3289c680fa6ff783ae088&language=en-US&page=5").read
-repos = JSON.parse(response)
-repos["results"].each do |repo|
-  if repo["original_language"] == "en" || repo["original_language"] == "fr"
-    Movie.create(
-      title: repo['original_title'],
-      overview: repo['overview'],
-      poster_url: "https://www.themoviedb.org/t/p/w1280#{repo['poster_path']}",
-      rating: repo['vote_average']
-    )
-  end
-end
+# response = URI.open("https://api.themoviedb.org/3/movie/top_rated?api_key=3dff1bf01bd3289c680fa6ff783ae088&language=en-US&page=1").read
+# repos = JSON.parse(response)
+# repos["results"].each do |repo|
+#   if repo["original_language"] == "en" || repo["original_language"] == "fr"
+#     Movie.create(
+#       title: repo['original_title'],
+#       overview: repo['overview'],
+#       poster_url: "https://www.themoviedb.org/t/p/w1280#{repo['poster_path']}",
+#       rating: repo['vote_average']
+#     )
+#   end
+# end

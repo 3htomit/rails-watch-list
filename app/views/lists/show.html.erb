@@ -1,9 +1,17 @@
-<%= link_to "Back to lists", lists_path %>
+<%= link_to "Back to lists", root_path %>
 <hr>
 <h2> <%= @list['name'] %> </h2>
 <br>
-<ul>
+
+<div class="d-flex flex-wrap justify-content-between mx-4">
   <% @movies.each do |movie| %>
-    <li> <%= movie['title'] %> </li>
+    <div class="card shadow m-2" style="width: 10rem;">
+      <%= link_to movie_path(movie['id']) do %>
+        <%= image_tag movie['poster_url'], alt: "Poster of #{movie['title']}", class: "card-img-top" %>
+      <% end %>
+      <div class="card-body">
+        <p> <%= link_to movie['title'], movie_path(movie['id']) %> </p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
