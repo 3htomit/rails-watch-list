@@ -1,13 +1,22 @@
 // Specific CSS for your home-page
-h1 {
-  a {
-    text-decoration: none;
-    color: darkcyan;
-    &:hover {
-      color: darkcyan;
+.banner {
+  background-image: url(https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  h1 {
+    a {
+      font-size: 70px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: white;
+      }
     }
   }
 }
+
 
 li {
   img {

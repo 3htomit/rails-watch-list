@@ -11,8 +11,9 @@
   </head>
 
   <body>
-    <br>
-    <h1 class="text-center"> <%= link_to "TMDB WATCH LISTS", movies_path %> </h1>
+    <div class="banner d-flex align-items-center justify-content-center">
+      <h1> <%= link_to "TMDB WATCH LISTS", movies_path %> </h1>
+    </div>
     <br>
     <div class="container">
       <%= yield %>
