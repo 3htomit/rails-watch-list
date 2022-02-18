@@ -83,11 +83,10 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.5)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
-    font_awesome5_rails (1.5.0)
-      nokogiri (>= 1.11.3)
-      railties (>= 4.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -241,8 +240,8 @@ DEPENDENCIES
   byebug
   cloudinary (~> 1.16.0)
   dotenv-rails
+  font-awesome-rails
   font-awesome-sass (~> 5.15)
-  font_awesome5_rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
