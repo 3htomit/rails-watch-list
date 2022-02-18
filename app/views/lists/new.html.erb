@@ -3,6 +3,7 @@
 <br>
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :list_photo, as: :file %>
   <%= f.submit "Add list", class: "btn btn-primary mt-2" %>
   <%= link_to "Cancel", :back, class: "btn btn-outline-warning mt-2"%>
 <% end %>

@@ -1,8 +1,8 @@
 <hr>
 <h2> Create a new bookmark </h2>
 <br>
-<%= simple_form_for(@bookmark) do |f| %>
-  <%= f.association :list %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :list, input_html: { value: @list[:id] } %>
   <%= f.association :movie %>
   <%= f.input :comment %>
   <%= f.submit "Add bookmark", class: "btn btn-primary mt-2" %>

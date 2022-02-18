@@ -1,20 +1,20 @@
 class BookmarksController < ApplicationController
   def new
+    @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
     # @movies = Movie.all
-    # @lists = List.all
   end
 
   def create
-    @bookmark = Bookmark.new(
-      comment: bookmark_params[:comment],
-      list: List.find(bookmark_params[:list_id]),
-      movie: Movie.find(bookmark_params[:movie_id])
-    )
-    if @bookmark.save
-      redirect_to root_path
-    else
+    if (bookmark_params[:comment] == "" || bookmark_params[:list_id] == "" || bookmark_params[:movie_id] == "")
       render :new
+    else
+      @bookmark = Bookmark.create(
+        comment: bookmark_params[:comment],
+        list: List.find(bookmark_params[:list_id]),
+        movie: Movie.find(bookmark_params[:movie_id])
+      )
+      redirect_to root_path
     end
   end
 

@@ -1,6 +1,11 @@
 <%= link_to "Back to lists", root_path %>
 <hr>
-<h2> <%= @list['name'] %> </h2>
+
+<div class="d-flex align-items-center">
+  <h2 class="flex-grow-1"> <%= @list['name'] %> </h2>
+  <%= link_to "➕", new_list_bookmark_path(@list) %>
+</div>
+
 <br>
 
 <div class="d-flex flex-wrap justify-content-between mx-4">
