@@ -7,11 +7,12 @@
 
 <br>
 
-<% @lists.each do |list| %>
-  <ul class="list-group d-flex">
-    <li class="list-group-item"> <%= link_to list['name'], list_path(list['id']) %> </li>
-    <%= link_to "❌", list_path(list),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  </ul>
-<% end %>
+<div class="list-cards">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list['id']) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to list['name'] %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
